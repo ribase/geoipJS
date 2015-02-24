@@ -4,8 +4,8 @@
 		// the plugin options
 		var settings = $.extend({
 			// These are the defaults.
-			chUrl: "app.de",
-			deUrl: "app.ch"
+			chUrl: "app.ch",
+			deUrl: "app.de"
 		}, options );
 	
 		// get the subdomain from link
@@ -32,17 +32,16 @@
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
 				var data = JSON.parse(request.responseText);
-				
-				alert();
 				if(data['countryCode'] == "CH"){
-	
 					console.log("Weiter zu CH");
-					window.location = 'http://'+subdomainName+settings.chUrl+"/"+path;
+					alert('http://'+subdomainName+settings.chUrl+path+window.location.search);
+					window.location = 'http://'+subdomainName+settings.chUrl+path+window.location.search;
 	
-				}else if(data['countryCode'] == "DE"){
+				}
+				if(data['countryCode'] == "DE"){
 		
 					console.log("Weiter zu DE");
-					window.location = 'http://'+subdomainName+settings.deUrl+"/"+path;
+					window.location = 'http://'+subdomainName+settings.deUrl+path+window.location.search;
 		
 				}
 			} else {

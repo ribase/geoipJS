@@ -87,8 +87,8 @@ apache:
     modules:
         - rewrite
     vhosts:
-        rg3urarqctyh:
-            servername: com.app.dev
+        app.com:
+            servername: app.com
             docroot: /var/www/
             port: '80'
             setenv:
@@ -113,8 +113,8 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-        pdxzekgbbrtn:
-            servername: de.app.dev
+        app.de:
+            servername: app.de
             docroot: /var/www/de
             port: '80'
             directories:
@@ -137,9 +137,81 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-        xypwt3tnniaa:
-            servername: ch.app.dev
+        app.ch:
+            servername: app.ch
             docroot: /var/www/ch
+            port: '80'
+            directories:
+                luy05owdkngi:
+                    provider: directory
+                    path: ''
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        sub.app.ch:
+            servername: sub.app.ch
+            docroot: /var/www/ch
+            port: '80'
+            directories:
+                luy05owdkngi:
+                    provider: directory
+                    path: ''
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        sub.app.de:
+            servername: sub.app.de
+            docroot: /var/www/de
+            port: '80'
+            directories:
+                luy05owdkngi:
+                    provider: directory
+                    path: ''
+                    options:
+                        - Indexes
+                        - FollowSymlinks
+                        - MultiViews
+                    allow_override:
+                        - All
+                    require:
+                        - all
+                        - granted
+                    custom_fragment: ''
+            engine: php
+            custom_fragment: ''
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_chain: ''
+            ssl_certs_dir: ''
+        sub.app.com:
+            servername: sub.app.com
+            docroot: /var/www/
             port: '80'
             directories:
                 luy05owdkngi:
@@ -170,7 +242,7 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        mdzolu2gygr9:
+        qzrdnxsrkrl2:
             proxy: ''
             server_name: awesome.dev
             server_aliases:
@@ -191,7 +263,7 @@ nginx:
 php:
     install: '0'
     version: '56'
-    composer: '0'
+    composer: '1'
     composer_home: ''
     modules:
         php:
@@ -237,18 +309,18 @@ drush:
     install: '0'
     version: 6.3.0
 ruby:
-    install: '1'
+    install: '0'
     versions:
-        Y9bFPn46OohS:
+        ZZmC61c29zec:
             version: ''
 nodejs:
     install: '0'
     npm_packages: {  }
 python:
-    install: '1'
+    install: '0'
     packages: {  }
     versions:
-        gSuOqBN9pFnJ:
+        B2yF8ekfCCt9:
             version: ''
 mysql:
     install: '0'
@@ -256,7 +328,7 @@ mysql:
     root_password: '123'
     adminer: 0
     databases:
-        DVBqnz6H3tlz:
+        FUTaXyJRg9qp:
             grant:
                 - ALL
             name: dbname

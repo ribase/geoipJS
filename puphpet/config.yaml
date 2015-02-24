@@ -89,6 +89,8 @@ apache:
     vhosts:
         app.com:
             servername: app.com
+            serveraliases:
+                - *.app.com
             docroot: /var/www/
             port: '80'
             setenv:
@@ -115,6 +117,8 @@ apache:
             ssl_certs_dir: ''
         app.de:
             servername: app.de
+            serveraliases:
+                - *.app.de
             docroot: /var/www/de
             port: '80'
             directories:
@@ -139,79 +143,9 @@ apache:
             ssl_certs_dir: ''
         app.ch:
             servername: app.ch
+            serveraliases:
+                - *.app.ch
             docroot: /var/www/ch
-            port: '80'
-            directories:
-                luy05owdkngi:
-                    provider: directory
-                    path: ''
-                    options:
-                        - Indexes
-                        - FollowSymlinks
-                        - MultiViews
-                    allow_override:
-                        - All
-                    require:
-                        - all
-                        - granted
-                    custom_fragment: ''
-            engine: php
-            custom_fragment: ''
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
-        sub.app.ch:
-            servername: sub.app.ch
-            docroot: /var/www/ch
-            port: '80'
-            directories:
-                luy05owdkngi:
-                    provider: directory
-                    path: ''
-                    options:
-                        - Indexes
-                        - FollowSymlinks
-                        - MultiViews
-                    allow_override:
-                        - All
-                    require:
-                        - all
-                        - granted
-                    custom_fragment: ''
-            engine: php
-            custom_fragment: ''
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
-        sub.app.de:
-            servername: sub.app.de
-            docroot: /var/www/de
-            port: '80'
-            directories:
-                luy05owdkngi:
-                    provider: directory
-                    path: ''
-                    options:
-                        - Indexes
-                        - FollowSymlinks
-                        - MultiViews
-                    allow_override:
-                        - All
-                    require:
-                        - all
-                        - granted
-                    custom_fragment: ''
-            engine: php
-            custom_fragment: ''
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
-        sub.app.com:
-            servername: sub.app.com
-            docroot: /var/www/
             port: '80'
             directories:
                 luy05owdkngi:
