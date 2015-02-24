@@ -6,6 +6,12 @@ Installation
 
 - jQuery einbinden
 - Plugin einbinden
+
+```
+<script src="geoip.js"></script>
+```
+
+
 - Plugin aktivieren
 ```javascript
 	$("body").geoip({
