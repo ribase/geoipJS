@@ -1,6 +1,13 @@
 GEOIP.JS
 ==============
 
+
+Was/Wieso/Warum
+--------------
+
+Ein einfaches jQuery-Plugin, dass per JSON, die aktuelle IP abfragt. Zur Zeit werden DE/CH als Weiche unterstützt.
+
+
 Installation
 --------------
 
