@@ -17,12 +17,12 @@ var chUrl = "http://ch.app.dev";
             if(data['countryCode'] == "CH"){
 
                 console.log("Weiter zu CH");
-                window.location = settings.chUrl;
+                window.location = settings.chUrl+"/"+window.location.pathname;
 
             }else if(data['countryCode'] == "DE"){
 
                 console.log("Weiter zu DE");
-                window.location = settings.deUrl;
+                window.location = settings.deUrl+"/"+window.location.pathname;
 
             }
 	    });
