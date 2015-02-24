@@ -18,8 +18,9 @@ Konfiguration
 
 **Empfehlung**
 - In der Apache Konfiguration, sollte der Eintrag "server_alias" wie folgt aussehen.
+```
 	ServerAlias *.domain.tld
-
+```
 *Dies hier ist nur wichtig, falls das Script erweitert werden soll*
 
 - Hier können neue "options" hinzugefügt werden.
