@@ -2,44 +2,41 @@ GEOIP.JS
 ==============
 
 
-Was/Wieso/Warum
+What is this?
 --------------
 
-Ein einfaches jQuery-Plugin, dass per JSON, die aktuelle IP abfragt. Zur Zeit werden DE/CH als Weiche unterstützt.
+GeoIP.js is a simple referrer which gets ip informations via "http://ip-api.com/" to refer the url request to the right domain/country
 
 
 Installation
 --------------
 
-- jQuery einbinden
-- Plugin einbinden
+- Include jQuery 
+- Include Plugin
 
 ```
 <script src="geoip.js"></script>
 ```
 
 
-- Plugin aktivieren
+- Plugin usage
 ```javascript
 	$("body").geoip({
-		chUrl: "URL FÜR CH",
-		deUrl: "URL FÜR DE"
+		countries: ['de', 'ch', 'it', 'fr'],
+        usePath: false
 	});
 ``` 	
-Konfiguration
+Configuration
 --------------
 
-**Empfehlung**
-- In der Apache Konfiguration, sollte der Eintrag "server_alias" wie folgt aussehen.
-```
-	ServerAlias *.domain.tld
-```
-*Dies hier ist nur wichtig, falls das Script erweitert werden soll*
+You can have several options available:
 
-- Hier können neue "options" hinzugefügt werden.
-```javascript
-	var settings = $.extend({
-		chUrl: "app.ch",
-		deUrl: "app.de"
-	}, options );
-``` 
+In "countries" u can define at least 2 countries to check
+``` countries: ['de', 'ch', 'it', 'fr'] ```
+
+The option "usePath" is used to add the path to the new refer
+``` usePath: false ```
+
+Domain is used to define a domain
+``` domain: 'google' ```
+
